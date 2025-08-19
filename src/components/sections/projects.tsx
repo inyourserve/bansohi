@@ -50,7 +50,7 @@ export function Projects({ id }: { id?: string }) {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Want to see something specific? We'll walk you through relevant work.
+            Want to see something specific? We&apos;ll walk you through relevant work.
           </p>
         </motion.div>
 

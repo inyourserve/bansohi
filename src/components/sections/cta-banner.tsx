@@ -27,7 +27,7 @@ export default function CTABanner() {
         />
         <div className="relative z-0 flex flex-col gap-3">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center">
-          Let's Build What Your Business Needs Next
+          Let&apos;s Build What Your Business Needs Next
           </h3>
           <p className="mt-3 md:mt-2 text-sm md:text-base lg:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
           Two weeks to a clear plan. A few months to a product you can trust

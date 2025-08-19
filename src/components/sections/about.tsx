@@ -76,12 +76,12 @@ export function About() {
               Why Choose Bansohi Technology
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Founded with a vision to democratize technology, we've been at the forefront of digital 
+              Founded with a vision to democratize technology, we&apos;ve been at the forefront of digital 
               innovation, transforming complex business challenges into elegant, scalable solutions.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our team combines technical expertise with strategic thinking to deliver solutions 
-              that not only meet today's needs but are built to scale for tomorrow's growth.
+              that not only meet today&apos;s needs but are built to scale for tomorrow&apos;s growth.
             </p>
           </div>
 
