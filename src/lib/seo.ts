@@ -6,12 +6,14 @@ export const generateOrganizationSchema = () => {
     "alternateName": "Bansohi Technology",
     "url": "https://bansohi.com",
     "logo": "https://bansohi.com/logo.png",
-    "description": "Leading technology company specializing in web development, SaaS solutions, AI automation, and SEO services. Transform your business with cutting-edge technology.",
-    "foundingDate": "2019",
+    "description": "Specialized in app development, MVP creation, backend systems, and growth marketing (SEO/ASO). We build mobile apps, SaaS platforms, and scalable solutions that drive business growth.",
+    "foundingDate": "2024-09-17",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Bangalore",
-      "addressRegion": "Karnataka",
+      "streetAddress": "C/o Manju Devi Vill, Bansohi, Panchdurgauli, Bansohi, Saran",
+      "addressLocality": "Chapra",
+      "addressRegion": "Bihar",
+      "postalCode": "841417",
       "addressCountry": "IN"
     },
     "contactPoint": {
@@ -26,13 +28,15 @@ export const generateOrganizationSchema = () => {
       "https://twitter.com/bansohi",
       "https://github.com/bansohi"
     ],
+    "taxID": "U62013BR2024PTC071453",
+    "leiCode": "071453",
     "services": [
-      "Web Development",
-      "SaaS Solutions", 
-      "AI & Automation",
-      "SEO & Digital Marketing",
-      "Mobile Development",
-      "Database Solutions"
+      "Mobile App Development",
+      "MVP Development",
+      "Backend Development", 
+      "SaaS Platform Development",
+      "SEO & ASO Optimization",
+      "App Maintenance & Support"
     ]
   }
 }
@@ -44,7 +48,7 @@ export const generateWebsiteSchema = () => {
     "name": "Bansohi Technology",
     "alternateName": "Bansohi",
     "url": "https://bansohi.com",
-    "description": "Transform your business with cutting-edge web development, SaaS platforms, and AI-powered solutions.",
+    "description": "Build apps that scale from MVP to enterprise. We specialize in mobile app development, MVP creation, and backend systems with proven SEO and ASO strategies.",
     "publisher": {
       "@type": "Organization",
       "name": "Bansohi Technology Pvt Ltd"
@@ -76,7 +80,7 @@ export const generateServiceSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Technology Solutions",
+    "serviceType": "App Development & Growth Solutions",
     "provider": {
       "@type": "Organization",
       "name": "Bansohi Technology Pvt Ltd"
@@ -84,22 +88,54 @@ export const generateServiceSchema = () => {
     "areaServed": "IN",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Technology Services",
+      "name": "App Development Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Web Development",
-            "description": "Custom web applications built with modern frameworks"
+            "name": "Mobile App Development",
+            "description": "Native and cross-platform mobile apps with intuitive UX and scalable architecture"
           }
         },
         {
           "@type": "Offer", 
           "itemOffered": {
             "@type": "Service",
-            "name": "SaaS Solutions",
-            "description": "Scalable Software-as-a-Service platforms"
+            "name": "MVP Development",
+            "description": "Rapid MVP creation to validate ideas and test market fit with scalability in mind"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Backend Development",
+            "description": "High-performance APIs, databases, and server infrastructure for scalable apps"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SaaS Platform Development",
+            "description": "Complete SaaS solutions with user management, billing, and multi-tenant architecture"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO & ASO Optimization",
+            "description": "Technical SEO for web apps and App Store Optimization for mobile apps"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "App Maintenance & Support",
+            "description": "Ongoing maintenance, updates, and 24/7 support for smooth app operations"
           }
         }
       ]

@@ -3,15 +3,16 @@
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
+import Link from "next/link"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navigation = [
-    { name: "Features", href: "#features" },
-    { name: "Projects", href: "#projects" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" }
+    { name: "Services", href: "/services" },
+    { name: "Work", href: "/work" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" }
   ]
 
   return (
@@ -20,35 +21,37 @@ export function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center gap-1">
+            <Link href="/" className="flex items-center gap-1">
               <Globe className="w-6 h-6 text-foreground" />
               <div className="text-xl md:text-2xl font-bold text-foreground">
                 Bansohi Technology
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-base"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
-            <div className="group relative">
-              <div className="absolute -inset-0.5 brand-gradient rounded-xl blur opacity-30 group-hover:opacity-75 transition duration-300" />
-              <Button className="relative bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 py-2 rounded-xl">
-                Get Started
-              </Button>
-            </div>
+            <Link href="/consultation">
+              <div className="group relative">
+                <div className="absolute -inset-0.5 brand-gradient rounded-xl blur opacity-30 group-hover:opacity-75 transition duration-300" />
+                <Button className="relative bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 py-2 rounded-xl">
+                  Get Started
+                </Button>
+              </div>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -67,19 +70,21 @@ export function Header() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col pt-4">
-                <Button className="justify-start bg-primary text-primary-foreground hover:bg-primary/90">
-                  Get Started
-                </Button>
+                <Link href="/consultation">
+                  <Button className="w-full justify-start bg-primary text-primary-foreground hover:bg-primary/90">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -7,40 +7,40 @@ import { Quote, Star } from "lucide-react"
 export function Testimonials({ id }: { id?: string }) {
   const testimonials = [
     {
-      quote: "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
-      name: "John Doe",
-      title: "Software Engineer",
-      avatar: "J"
+      quote: "Bansohi delivered our MVP in record time—the app was stable, scalable, and ready for our Series A pitch. Their backend expertise was invaluable.",
+      name: "Rahul Sharma",
+      title: "Founder, Mobile App Startup",
+      avatar: "R"
     },
     {
-      quote: "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
-      name: "Sophia Lee",
-      title: "Data Analyst", 
+      quote: "They built our SaaS platform from scratch with perfect SEO implementation. Our organic traffic increased by 300% in 6 months.",
+      name: "Priya Patel",
+      title: "CEO, SaaS Company", 
+      avatar: "P"
+    },
+    {
+      quote: "The app development quality was outstanding, and their ASO strategy helped us reach #1 in our category within 3 months.",
+      name: "Amit Kumar",
+      title: "Product Manager, E-commerce App",
+      avatar: "A"
+    },
+    {
+      quote: "From MVP to production, their backend development was rock-solid. The app handles 10x more users than expected.",
+      name: "Neha Singh",
+      title: "CTO, Fintech Startup",
+      avatar: "N"
+    },
+    {
+      quote: "Their SEO and ASO strategies transformed our app's visibility. We're now getting organic users without paid marketing.",
+      name: "Vikram Mehta",
+      title: "Marketing Director, Tech Company", 
+      avatar: "V"
+    },
+    {
+      quote: "The complete development cycle was seamless—from concept to app store success. Highly recommended for app development.",
+      name: "Sneha Reddy",
+      title: "Product Lead, Health Tech",
       avatar: "S"
-    },
-    {
-      quote: "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
-      name: "Michael Johnson",
-      title: "UX Designer",
-      avatar: "M"
-    },
-    {
-      quote: "I've seen a significant improvement in our team's productivity since we started using this service.",
-      name: "Emily Davis",
-      title: "Marketing Specialist",
-      avatar: "E"
-    },
-    {
-      quote: "The best investment we've made! The support team is also super responsive and helpful.",
-      name: "Daniel Martinez",
-      title: "Full-Stack Developer", 
-      avatar: "D"
-    },
-    {
-      quote: "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-      name: "Jane Smith",
-      title: "Product Manager",
-      avatar: "J"
     }
   ]
 

@@ -9,28 +9,28 @@ export function FAQ({ id }: { id?: string }) {
 
   const faqs = [
     {
-      question: "What services does Bansohi Technology offer?",
-      answer: "We offer comprehensive digital solutions including web development, mobile app development, SaaS platform creation, digital marketing, AI integration, and ongoing maintenance & support."
+      question: "What types of apps do you develop?",
+      answer: "We develop mobile apps (iOS/Android), web applications, SaaS platforms, and MVPs with robust backend systems. Our expertise covers the complete app development lifecycle."
     },
     {
-      question: "How long does it typically take to complete a project?",
-      answer: "Project timelines vary based on complexity and scope. A simple website typically takes 2-4 weeks, while complex SaaS platforms may take 3-6 months. We provide detailed timelines during our initial consultation."
+      question: "How do you approach MVP development?",
+      answer: "We focus on core features, rapid development, and market validation while building with scalability in mind. Our MVP process typically takes 4-8 weeks to get your app to market quickly."
     },
     {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer comprehensive maintenance and support packages including security updates, performance monitoring, bug fixes, and feature enhancements. Our support is available 24/7."
+      question: "Do you handle backend development?",
+      answer: "Yes—we build complete backend systems including APIs, databases, authentication, and cloud infrastructure. Our backend expertise ensures your apps are scalable, secure, and performant."
     },
     {
-      question: "What technologies do you work with?",
-      answer: "We work with modern technologies including React, Next.js, Node.js, Python, React Native, AWS, Google Cloud, PostgreSQL, MongoDB, and many others. We choose the best tech stack for each project's specific needs."
+      question: "How do you optimize for app store visibility?",
+      answer: "We implement comprehensive ASO strategies including keyword optimization, app store listings, and user acquisition tactics. This helps your app rank higher and get discovered by more users."
     },
     {
-      question: "How do you ensure project quality and deadlines?",
-      answer: "We follow agile development methodologies with regular sprints, code reviews, automated testing, and continuous integration. We provide weekly progress updates and maintain transparent communication throughout the project."
+      question: "What about SEO for web apps?",
+      answer: "We optimize web applications for search engines with technical SEO, content strategy, and performance optimization. This drives organic traffic and improves your app's online visibility."
     },
     {
-      question: "What is your pricing model?",
-      answer: "Our pricing depends on project scope, complexity, and timeline. We offer both fixed-price and hourly billing options. We provide detailed proposals with transparent pricing after understanding your specific requirements."
+      question: "How do you ensure app quality?",
+      answer: "We use modern frameworks, testing, CI/CD, performance optimization, and thorough quality assurance processes. Our apps are built to handle scale and provide excellent user experiences."
     }
   ]
 

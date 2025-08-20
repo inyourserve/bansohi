@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Globe, Database, Brain, Shield, Search, Users } from "lucide-react"
+import { Globe, Database, Brain, Shield, Search, Zap } from "lucide-react"
 
 export function Services({ id }: { id?: string }) {
   const ref = useRef(null)
@@ -11,33 +11,33 @@ export function Services({ id }: { id?: string }) {
   const features = [
     {
       icon: Globe,
-      title: "Web & App Development",
-      description: "High-performance web and mobile experiences with clear UX, clean architecture, and maintainable code."
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile apps with intuitive UX, robust backend integration, and scalable architecture for iOS and Android."
     },
     {
       icon: Database,
-      title: "SaaS Platforms",
-      description: "Multi-tenant, secure, and scalable platforms with billing, dashboards, and admin tooling built-in."
+      title: "MVP Development",
+      description: "Rapid MVP creation to validate ideas, test market fit, and secure funding—built with scalability in mind from day one."
     },
     {
       icon: Brain,
-      title: "AI & Automation",
-      description: "Integrations and automations that save hours—LLM features, workflows, data processing, and ops tooling."
+      title: "Backend Development",
+      description: "High-performance APIs, databases, and server infrastructure that power your apps with security, scalability, and reliability."
     },
     {
       icon: Shield,
-      title: "Enterprise Software",
-      description: "Mission-critical systems with strong security, observability, and uptime guarantees."
+      title: "SaaS Platform Development",
+      description: "Complete SaaS solutions with user management, billing systems, analytics dashboards, and multi-tenant architecture."
     },
     {
       icon: Search,
-      title: "SEO & Technical Performance",
-      description: "Technical SEO, Core Web Vitals, and high-speed architecture for growth."
+      title: "SEO & ASO Optimization",
+      description: "Technical SEO for web apps and App Store Optimization for mobile apps—driving organic growth and user acquisition."
     },
     {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Co-delivery with internal teams or full ownership—whatever works best for your organization."
+      icon: Zap,
+      title: "App Maintenance & Support",
+      description: "Ongoing maintenance, updates, bug fixes, and 24/7 support to keep your apps running smoothly and securely."
     }
   ]
 
@@ -55,7 +55,7 @@ export function Services({ id }: { id?: string }) {
             <span className="text-sm font-medium text-muted-foreground">What We Do</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Full-Stack Product Development—From Idea to Impact
+            Full-Stack App Development & Growth Solutions
           </h2>
         </motion.div>
 

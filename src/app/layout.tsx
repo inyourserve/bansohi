@@ -10,24 +10,24 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Bansohi Technology Pvt Ltd - Web Development & SaaS Solutions',
-  description: 'Leading technology company specializing in web development, SaaS solutions, AI automation, and SEO services. Transform your business with cutting-edge technology.',
-  keywords: 'web development, SaaS, AI automation, SEO, technology solutions, software development',
+  title: 'Mobile App Development & MVP Company | Bansohi Technology',
+  description: 'We build mobile apps, MVPs, and SaaS platforms with robust backend development and SEO/ASO optimization. Book a free consultation.',
+  keywords: 'mobile app development, MVP development, backend development, SaaS platforms, SEO optimization, ASO, app store optimization, React Native, Node.js',
   icons: {
     icon: '/globe-favicon.svg',
     shortcut: '/globe-favicon.svg',
     apple: '/globe-favicon.svg',
   },
   openGraph: {
-    title: 'Bansohi Technology Pvt Ltd - Web Development & SaaS Solutions',
-    description: 'Leading technology company specializing in web development, SaaS solutions, AI automation, and SEO services.',
+    title: 'Mobile App Development & MVP Company | Bansohi Technology',
+    description: 'We build mobile apps, MVPs, and SaaS platforms with robust backend development and SEO/ASO optimization. Book a free consultation.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bansohi Technology Pvt Ltd - Web Development & SaaS Solutions',
-    description: 'Leading technology company specializing in web development, SaaS solutions, AI automation, and SEO services.',
+    title: 'Mobile App Development & MVP Company | Bansohi Technology',
+    description: 'We build mobile apps, MVPs, and SaaS platforms with robust backend development and SEO/ASO optimization. Book a free consultation.',
   },
   robots: {
     index: true,

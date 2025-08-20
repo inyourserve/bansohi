@@ -2,6 +2,7 @@ import { ArrowUpRight, Forward } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function CTABanner() {
   return (
@@ -27,22 +28,26 @@ export default function CTABanner() {
         />
         <div className="relative z-0 flex flex-col gap-3">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center">
-          Let&apos;s Build What Your Business Needs Next
+          Let&apos;s Build Your App and Scale Your Business
           </h3>
           <p className="mt-3 md:mt-2 text-sm md:text-base lg:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-          Two weeks to a clear plan. A few months to a product you can trust
+          From MVP to market leader—we handle the full development cycle with growth marketing included
           </p>
         </div>
         <div className="relative z-0 mt-14 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <div className="group relative">
             <div className="absolute -inset-1 brand-gradient rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300" />
-            <Button size="lg" className="relative bg-primary text-primary-foreground hover:bg-primary/90">
-              Get Started <ArrowUpRight className="!h-5 !w-5" />
-            </Button>
+            <Link href="/consultation">
+              <Button size="lg" className="relative bg-primary text-primary-foreground hover:bg-primary/90">
+                Book a Free Consultation <ArrowUpRight className="!h-5 !w-5" />
+              </Button>
+            </Link>
           </div>
-          <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-accent">
-            Discover More <Forward className="!h-5 !w-5" />
-          </Button>
+          <Link href="/work">
+            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-accent">
+              See Our Work <Forward className="!h-5 !w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ export function Footer() {
               <h3 className="text-xl md:text-2xl font-bold text-foreground">Bansohi Technology</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed text-base">
-              Leading technology company specializing in web development, SaaS solutions, AI automation, and SEO services.
+              Specialized in app development, MVP creation, backend systems, and growth marketing (SEO/ASO).
             </p>
           </div>
 
@@ -23,10 +23,10 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4 text-foreground uppercase tracking-wider">SERVICES</h4>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Web Development</a></li>
+              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Mobile App Development</a></li>
+              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">MVP Development</a></li>
+              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Backend Development</a></li>
               <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">SaaS Platforms</a></li>
-              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">AI Integration</a></li>
-              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">SEO Services</a></li>
             </ul>
           </div>
 
@@ -66,6 +66,9 @@ export function Footer() {
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
             © 2025 Bansohi Technology Private Limited. All rights reserved.
+          </p>
+          <p className="text-muted-foreground text-xs mt-2">
+            CIN: U62013BR2024PTC071453 | Registered Office: C/o Manju Devi Vill, Bansohi, Panchdurgauli, Saran, Chapra, Bihar - 841417
           </p>
         </div>
       </div>

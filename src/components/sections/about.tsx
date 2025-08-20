@@ -9,9 +9,9 @@ export function About() {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   const stats = [
-    { value: "50+", label: "Projects Delivered", icon: Target },
+    { value: "50+", label: "Apps Delivered", icon: Target },
     { value: "99%", label: "Client Satisfaction", icon: Users },
-    { value: "5+", label: "Years Experience", icon: Zap },
+    { value: "1+", label: "Years Experience", icon: Zap },
     { value: "24/7", label: "Support Available", icon: Shield }
   ]
 
@@ -30,13 +30,14 @@ export function About() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Building Digital Excellence <br />
-            Since 2019
+            From MVP to Market Leader <br />
+            Your App Development Partner
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We are a technology company specializing in web development, mobile applications, 
-            SaaS platforms, and digital transformation solutions for businesses of all sizes.
+            Bansohi Technology Pvt Ltd is your end-to-end app development partner. We excel at building MVPs that validate ideas, 
+            robust backend systems that scale, and SaaS platforms that drive growth. Our expertise spans mobile apps, 
+            web applications, backend development, and digital marketing strategies including SEO and ASO.
           </p>
         </motion.div>
 
@@ -73,26 +74,26 @@ export function About() {
         >
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              Why Choose Bansohi Technology
+              Our Core Strengths
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Founded with a vision to democratize technology, we&apos;ve been at the forefront of digital 
-              innovation, transforming complex business challenges into elegant, scalable solutions.
+              We specialize in rapid MVP development, robust backend architecture, and scalable SaaS platforms. 
+              Our expertise in SEO and ASO ensures your apps not only work perfectly but also reach your target audience effectively.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our team combines technical expertise with strategic thinking to deliver solutions 
-              that not only meet today&apos;s needs but are built to scale for tomorrow&apos;s growth.
+              From initial concept to app store success, we handle the complete development lifecycle with 
+              a focus on quality, performance, and growth-driven results.
             </p>
           </div>
 
           <div className="space-y-4">
             {[
-              "Custom Web Development",
-              "SaaS Platform Development", 
               "Mobile App Development",
-              "Digital Marketing Solutions",
-              "AI & Automation Integration",
-              "Cloud Infrastructure"
+              "MVP Development", 
+              "Backend Development",
+              "SaaS Platform Development",
+              "SEO Optimization",
+              "ASO (App Store Optimization)"
             ].map((service, index) => (
               <motion.div
                 key={service}

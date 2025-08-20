@@ -4,6 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -30,12 +31,12 @@ export function Hero() {
           className="mb-8"
         >
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 px-2">
-            Build Software That <br className="hidden sm:block" />
-            <span className="gradient-text">Moves Business Forward</span>
+            Build Apps That Scale <br className="hidden sm:block" />
+            <span className="gradient-text">From MVP to Enterprise</span>
           </h1>
           
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            We design, architect, and ship world-class web apps, SaaS platforms, and AI-powered systems—purpose-built for scale, speed, and outcomes.
+            We specialize in mobile app development, MVP creation, and backend systems—turning ideas into scalable SaaS platforms with proven SEO and ASO strategies.
           </p>
         </motion.div>
 
@@ -48,22 +49,26 @@ export function Hero() {
         >
           <div className="group relative">
             <div className="absolute -inset-1 brand-gradient rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-300" />
-            <Button 
-              size="lg" 
-              className="relative h-14 px-8 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/consultation">
+              <Button 
+                size="lg" 
+                className="relative h-14 px-8 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Start Your App Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
           
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="h-14 px-8 text-lg font-semibold border-border text-foreground hover:bg-accent dark-card-bg"
-          >
-            View Case Studies
-          </Button>
+          <Link href="/work">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="h-14 px-8 text-lg font-semibold border-border text-foreground hover:bg-accent dark-card-bg"
+            >
+              View Case Studies
+            </Button>
+          </Link>
         </motion.div>
 
         {/* Simple Stats */}
@@ -74,7 +79,7 @@ export function Hero() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-8 border-t border-border"
         >
           {[
-            { number: "50+", label: "Projects Delivered" },
+            { number: "50+", label: "Apps Delivered" },
             { number: "99%", label: "Client Satisfaction" },
             { number: "5+", label: "Years Shipping Production Software" }
           ].map((stat, idx) => (

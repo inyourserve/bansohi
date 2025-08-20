@@ -9,24 +9,24 @@ export function Projects({ id }: { id?: string }) {
   const projects = [
     {
       title: "ShagunPe",
-      description: "Rebuilt the payments flow and dashboard for faster onboarding and higher conversion—scalable, compliant, and reliable.",
+      description: "Built a complete payment processing app with secure backend, real-time analytics, and ASO optimization—resulting in 40% increase in app store visibility.",
       image: "/api/placeholder/400/300",
-      technologies: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-      category: "Fintech Platform"
+      technologies: ["React Native", "Node.js", "PostgreSQL", "Stripe"],
+      category: "Payment App"
     },
     {
       title: "Workerlly",
-      description: "Built a platform to match, schedule, and manage workers at scale—clean UX, admin visibility, and automation baked in.",
+      description: "Developed a worker management SaaS platform with mobile apps, backend APIs, and SEO-optimized web dashboard for better discoverability.",
       image: "/api/placeholder/400/300", 
       technologies: ["React", "Python", "MongoDB", "AWS"],
-      category: "Workforce Management"
+      category: "SaaS Platform"
     },
     {
-      title: "SafeFlipper",
-      description: "Engineered a secure, high-availability platform with logging, monitoring, and alerting for peace of mind.",
+      title: "Nearmind",
+      description: "Built a social networking app to connect people with similar skills in nearby locations. Features discover, connect, and chat functionality with location-based matching.",
       image: "/api/placeholder/400/300",
-      technologies: ["React Native", "Firebase", "Node.js", "Security APIs"],
-      category: "Security Platform"
+      technologies: ["React Native", "Firebase", "Node.js", "Geolocation APIs"],
+      category: "Social Networking"
     }
   ]
 
