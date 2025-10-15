@@ -11,7 +11,7 @@ export function About() {
   const stats = [
     { value: "50+", label: "Apps Delivered", icon: Target },
     { value: "99%", label: "Client Satisfaction", icon: Users },
-    { value: "1+", label: "Years Experience", icon: Zap },
+    { value: "5+", label: "Years Experience", icon: Zap },
     { value: "24/7", label: "Support Available", icon: Shield }
   ]
 
@@ -54,13 +54,20 @@ export function About() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-              className="text-center p-4 md:p-6 dark-card-bg rounded-lg card-hover group"
+              className="group h-full"
             >
-              <div className="w-12 h-12 mx-auto mb-4 icon-consistent rounded-lg flex items-center justify-center">
-                <stat.icon className="w-6 h-6 text-white" />
+              <div className="h-full bg-background/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 p-4 md:p-6 relative">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10 text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 icon-consistent rounded-lg flex items-center justify-center">
+                    <stat.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">{stat.value}</div>
+                  <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
+                </div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">{stat.value}</div>
-              <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

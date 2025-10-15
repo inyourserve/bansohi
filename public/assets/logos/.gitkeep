@@ -1,0 +1,12 @@
+# Logos folder
+# Place your company logos, brand assets, and logo variations here
+# 
+# Suggested structure:
+# - logo-primary.svg (main logo)
+# - logo-white.svg (white version for dark backgrounds)
+# - logo-dark.svg (dark version for light backgrounds)
+# - logo-icon.svg (icon only version)
+# - logo-horizontal.svg (horizontal layout)
+# - logo-vertical.svg (vertical layout)
+# - favicon.ico
+# - apple-touch-icon.png

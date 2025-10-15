@@ -10,7 +10,7 @@ export function Header() {
 
   const navigation = [
     { name: "Services", href: "/services" },
-    { name: "Work", href: "/work" },
+    { name: "Work", href: "/works" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
   ]

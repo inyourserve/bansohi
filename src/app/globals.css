@@ -5,8 +5,6 @@
 /* 60/30/10 Color System - Monochrome Professional */
 :root {
   /* Shadcn/ui compatibility */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 6%;
   --card: 0 0% 100%;
   --card-foreground: 0 0% 6%;
   --popover: 0 0% 100%;
@@ -40,6 +38,12 @@
   /* Accent (10%) - CTAs and highlights */
   --color-accent-primary: 0 0 0;
   --color-accent-hover: 32 32 32;
+  
+  /* Premium Orange Accent */
+  --color-orange-primary: 255 102 56;   /* #ff6638 - Dark orange */
+  --color-orange-hover: 230 85 45;      /* Darker orange on hover */
+  --color-orange-light: 255 130 85;     /* Light orange for highlights */
+  --color-orange-bg: 255 245 240;       /* Very light orange background */
   
   /* Semantic colors */
   --color-success: 34 197 94;
@@ -83,6 +87,12 @@
   /* Accent (10%) - CTAs and highlights */
   --color-accent-primary: 255 255 255; /* Pure white for contrast */
   --color-accent-hover: 228 228 231;   /* Slightly dimmed white */
+  
+  /* Premium Orange Accent for Dark Theme */
+  --color-orange-primary: 255 102 56;   /* #ff6638 - Orange for dark theme */
+  --color-orange-hover: 230 85 45;      /* Darker orange on hover */
+  --color-orange-light: 255 130 85;     /* Light orange for highlights */
+  --color-orange-bg: 30 20 10;          /* Dark orange background */
   
   /* Brand colors for gradients and highlights - SingleStore inspired */
   --color-brand-blue: 59 130 246;     /* Modern blue */
@@ -215,8 +225,119 @@ html {
   background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(147, 51, 234) 100%);
 }
 
+/* Premium Orange Accent Classes */
+.orange-gradient {
+  background: linear-gradient(135deg, hsl(var(--color-orange-primary)) 0%, hsl(var(--color-orange-hover)) 100%);
+}
+
+.orange-gradient-text {
+  background: linear-gradient(135deg, hsl(var(--color-orange-primary)) 0%, hsl(var(--color-orange-light)) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.orange-accent {
+  color: hsl(var(--color-orange-primary));
+}
+
+.orange-bg {
+  background-color: hsl(var(--color-orange-bg));
+}
+
+.orange-border {
+  border-color: hsl(var(--color-orange-primary));
+}
+
+.orange-shadow {
+  box-shadow: 0 4px 14px 0 hsl(var(--color-orange-primary) / 0.2);
+}
+
+.orange-glow {
+  box-shadow: 0 0 20px hsl(var(--color-orange-primary) / 0.3);
+}
+
 .icon-consistent {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

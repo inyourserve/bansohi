@@ -43,7 +43,7 @@ export default function CTABanner() {
               </Button>
             </Link>
           </div>
-          <Link href="/work">
+          <Link href="/works">
             <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-accent">
               See Our Work <Forward className="!h-5 !w-5" />
             </Button>

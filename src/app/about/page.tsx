@@ -100,9 +100,9 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section className="py-20 bg-background">
+        <section className="pt-20 pb-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -126,7 +126,7 @@ export default function AboutPage() {
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </Link>
-                  <Link href="/work">
+                  <Link href="/works">
                     <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-semibold border-border text-foreground hover:bg-accent">
                       View Our Work
                     </Button>
@@ -266,14 +266,20 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="group h-full"
                 >
-                  <Card className="dark-card-bg p-6 text-center card-hover">
-                    <div className="icon-consistent w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <value.icon className="w-8 h-8 text-primary" />
+                  <div className="h-full bg-background/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 p-6 relative">
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10 text-center">
+                      <div className="icon-consistent w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <value.icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{value.title}</h3>
+                      <p className="text-sm text-muted-foreground">{value.description}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground">{value.description}</p>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>

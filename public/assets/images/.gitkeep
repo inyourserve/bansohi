@@ -1,0 +1,19 @@
+# Images folder
+# Place general images, backgrounds, and graphics here
+#
+# Suggested structure:
+# - backgrounds/
+#   - hero-bg.jpg
+#   - section-bg.jpg
+# - team/
+#   - team-member-1.jpg
+#   - team-member-2.jpg
+# - clients/
+#   - client-logo-1.png
+#   - client-logo-2.png
+# - testimonials/
+#   - testimonial-1.jpg
+#   - testimonial-2.jpg
+# - blog/
+#   - blog-post-1.jpg
+#   - blog-post-2.jpg

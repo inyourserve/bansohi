@@ -1,0 +1,21 @@
+# Icons folder
+# Place custom icons, social media icons, and UI icons here
+#
+# Suggested structure:
+# - social/
+#   - facebook.svg
+#   - twitter.svg
+#   - linkedin.svg
+#   - instagram.svg
+#   - github.svg
+# - ui/
+#   - arrow-right.svg
+#   - check.svg
+#   - star.svg
+#   - phone.svg
+#   - email.svg
+# - tech/
+#   - react.svg
+#   - nodejs.svg
+#   - mongodb.svg
+#   - aws.svg

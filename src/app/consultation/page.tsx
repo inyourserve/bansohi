@@ -20,11 +20,85 @@ export default function ConsultationPage() {
     description: ""
   })
   const [uploadedFile, setUploadedFile] = useState<File | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [uploadedFileUrl, setUploadedFileUrl] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    
+    try {
+      // Upload file first if one is selected
+      let fileName = null
+      let fileUrl = null
+      
+      if (uploadedFile) {
+        const uploadFormData = new FormData()
+        uploadFormData.append('file', uploadedFile)
+        
+        const uploadResponse = await fetch('/api/upload', {
+          method: 'POST',
+          body: uploadFormData,
+        })
+        
+        const uploadResult = await uploadResponse.json()
+        
+        if (uploadResponse.ok) {
+          fileName = uploadResult.fileName
+          fileUrl = uploadResult.fileUrl
+        } else {
+          throw new Error(uploadResult.error || 'File upload failed')
+        }
+      }
+
+      // Submit consultation form to central API
+      const response = await fetch('http://localhost:3001/api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          projectName: 'bansohi',
+          formType: 'consultation',
+          submissionData: formData,
+          files: fileName && fileUrl ? [{
+            fileName,
+            filePath: fileUrl,
+            fileSize: uploadedFile?.size || 0,
+            mimeType: uploadedFile?.type || 'application/octet-stream'
+          }] : []
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            projectType: "",
+            budget: "",
+            timeline: "",
+            description: ""
+          })
+          setUploadedFile(null)
+          setUploadedFileUrl(null)
+        }, 3000)
+      } else {
+        alert(result.error || 'Failed to submit consultation form. Please try again.')
+      }
+    } catch (error) {
+      console.error('Submission error:', error)
+      alert('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -45,7 +119,7 @@ export default function ConsultationPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         {/* Page Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +152,18 @@ export default function ConsultationPage() {
             <div className="dark-card-bg rounded-xl p-8 md:p-10">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Project Details</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Consultation Request Sent!</h3>
+                  <p className="text-muted-foreground">Thank you for your interest. We'll review your project details and get back to you within 24 hours.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
@@ -238,11 +323,20 @@ export default function ConsultationPage() {
                 <Button 
                   type="submit" 
                   size="lg" 
+                  disabled={isSubmitting}
                   className="w-full h-12 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl"
                 >
-                  Send Project Details
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Project Details'
+                  )}
                 </Button>
-              </form>
+                </form>
+              )}
             </div>
           </motion.div>
 

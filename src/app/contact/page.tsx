@@ -95,32 +95,55 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        subject: "",
-        message: ""
+    try {
+      // Use central form submission
+      const response = await fetch('http://localhost:3001/api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          projectName: 'bansohi',
+          formType: 'contact',
+          submissionData: formData
+        }),
       });
-    }, 3000);
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            subject: "",
+            message: ""
+          });
+        }, 3000);
+      } else {
+        // Handle error
+        console.error('Form submission error:', result.error);
+        alert('Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      alert('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section className="py-20 bg-background">
+        <section className="pt-20 pb-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,21 +186,27 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="group h-full"
                 >
-                  <Card className="dark-card-bg p-8 text-center card-hover">
-                    <div className="icon-consistent w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                      <method.icon className="w-8 h-8 text-primary" />
+                  <div className="h-full bg-background/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 p-8 relative">
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10 text-center">
+                      <div className="icon-consistent w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <method.icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{method.title}</h3>
+                      <p className="text-muted-foreground mb-4">{method.description}</p>
+                      <div className="text-lg font-semibold text-foreground mb-6">{method.contact}</div>
+                      <Link href={method.href}>
+                        <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 group-hover:scale-105 transition-transform duration-300">
+                          {method.action}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{method.title}</h3>
-                    <p className="text-muted-foreground mb-4">{method.description}</p>
-                    <div className="text-lg font-semibold text-foreground mb-6">{method.contact}</div>
-                    <Link href={method.href}>
-                      <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                        {method.action}
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -312,18 +341,29 @@ export default function ContactPage() {
                   </div>
 
                   {officeInfo.map((info, index) => (
-                    <Card key={info.title} className="dark-card-bg p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="icon-consistent w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <info.icon className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-foreground mb-2">{info.title}</h3>
-                          <p className="text-foreground mb-1">{info.address}</p>
-                          <p className="text-sm text-muted-foreground">{info.details}</p>
+                    <motion.div
+                      key={info.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.6 }}
+                      className="group h-full"
+                    >
+                      <div className="h-full bg-background/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 p-6 relative">
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div className="relative z-10 flex items-start gap-4">
+                          <div className="icon-consistent w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <info.icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{info.title}</h3>
+                            <p className="text-foreground mb-1">{info.address}</p>
+                            <p className="text-sm text-muted-foreground">{info.details}</p>
+                          </div>
                         </div>
                       </div>
-                    </Card>
+                    </motion.div>
                   ))}
 
 

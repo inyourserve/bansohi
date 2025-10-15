@@ -67,17 +67,24 @@ export function Services({ id }: { id?: string }) {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-              className="p-4 md:p-6 dark-card-bg rounded-lg card-hover group"
+              className="group h-full"
             >
-              <div className="w-12 h-12 icon-consistent rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-white" />
+              <div className="h-full bg-background/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 p-4 md:p-6 relative">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className="w-12 h-12 icon-consistent rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                  
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">{feature.title}</h3>
-              
-              <p className="text-base text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
             </motion.div>
           ))}
         </div>
