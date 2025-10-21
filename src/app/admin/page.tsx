@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -56,7 +56,7 @@ export default function AdminPage() {
   const [error, setError] = useState<string | null>(null);
   const [deleting, setDeleting] = useState<number | null>(null);
 
-  const fetchSubmissions = async (page = 1) => {
+  const fetchSubmissions = useCallback(async (page = 1) => {
     try {
       setLoading(true);
       setError(null);
@@ -88,7 +88,7 @@ export default function AdminPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [activeTab]);
 
   const deleteSubmission = async (id: number) => {
     try {
@@ -135,7 +135,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     fetchSubmissions();
-  }, [activeTab]);
+  }, [activeTab, fetchSubmissions]);
 
   if (loading) {
     return (

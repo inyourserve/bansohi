@@ -160,7 +160,7 @@ export default function ConsultationPage() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Consultation Request Sent!</h3>
-                  <p className="text-muted-foreground">Thank you for your interest. We'll review your project details and get back to you within 24 hours.</p>
+                  <p className="text-muted-foreground">Thank you for your interest. We&apos;ll review your project details and get back to you within 24 hours.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">

@@ -124,7 +124,7 @@ const coreServices = [
   {
     icon: TrendingUp,
     title: "App Store Optimization",
-    description: "Maximize your app's visibility and downloads with our ASO services. We optimize your app store listings, keywords, and conversion rates to drive organic growth.",
+    description: "Maximize your app&apos;s visibility and downloads with our ASO services. We optimize your app store listings, keywords, and conversion rates to drive organic growth.",
     features: [
       "Keyword research & optimization",
       "App store listing optimization",
@@ -168,7 +168,7 @@ const whyChooseUs = [
   {
     icon: Zap,
     title: "Post-Launch Support",
-    description: "Ongoing maintenance, updates, and feature enhancements. We're your long-term technology partner, not just a development vendor."
+    description: "Ongoing maintenance, updates, and feature enhancements. We&apos;re your long-term technology partner, not just a development vendor."
   }
 ];
 
@@ -404,7 +404,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.6 }}
               className="inline-block px-3 md:px-4 py-2 dark-card-bg rounded-full mb-6 md:mb-8"
             >
-              <span className="text-xs md:text-sm font-medium text-muted-foreground text-center">India's Top Mobile App Development Agency</span>
+              <span className="text-xs md:text-sm font-medium text-muted-foreground text-center">India&apos;s Top Mobile App Development Agency</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -496,7 +496,7 @@ export default function ServicesPage() {
                 We offer full-cycle software development services
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Ideate, build, grow, scale — we're here every step of the way, fast-tracking your journey to the top.
+                Ideate, build, grow, scale — we&apos;re here every step of the way, fast-tracking your journey to the top.
               </p>
             </motion.div>
 
@@ -582,14 +582,14 @@ export default function ServicesPage() {
                   {
                     step: "01",
                     title: "Test your business idea",
-                    description: "Validate your idea's feasibility to reduce development costs, avoid flops, and build a data-backed digital product. We pay special attention to market research and concept analysis to lay a solid foundation for your software development project.",
+                    description: "Validate your idea&apos;s feasibility to reduce development costs, avoid flops, and build a data-backed digital product. We pay special attention to market research and concept analysis to lay a solid foundation for your software development project.",
                     services: ["Product Discovery", "UX/UI Design", "MVP App Development"],
                     image: "👨‍💼"
                   },
                   {
                     step: "02", 
                     title: "Build your digital product",
-                    description: "Transform your idea into a software product that attracts early users and moves your company closer toward product market fit. We finish your product development on time and on budget, so you don't have to worry.",
+                    description: "Transform your idea into a software product that attracts early users and moves your company closer toward product market fit. We finish your product development on time and on budget, so you don&apos;t have to worry.",
                     services: ["Mobile App Development", "Web App Development", "Quality Assurance"],
                     image: "👨‍💻"
                   },
@@ -705,7 +705,7 @@ export default function ServicesPage() {
               />
             <div className="relative z-0 flex flex-col gap-3">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground text-center">
-                  India's Top App Development Agency
+                  India&apos;s Top App Development Agency
               </h3>
               <p className="mt-3 md:mt-2 text-sm md:text-base lg:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
                   Join 50+ successful startups and enterprises who chose Bansohi for their mobile app development needs

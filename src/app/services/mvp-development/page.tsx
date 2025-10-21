@@ -65,7 +65,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Get Investors On Board",
-    description: "Showcase your app's functionality, prove your product commitment, and demonstrate the potential of your idea to picky investors."
+    description: "Showcase your app&apos;s functionality, prove your product commitment, and demonstrate the potential of your idea to picky investors."
   },
   {
     icon: Users,
@@ -166,7 +166,7 @@ const deliverables = [
   {
     icon: ImageIcon,
     title: "Graphics Materials",
-    description: "Mobile app icons, screenshots, and responsive graphics compliant with app stores' guidelines."
+    description: "Mobile app icons, screenshots, and responsive graphics compliant with app stores&apos; guidelines."
   },
   {
     icon: BookOpen,
@@ -352,7 +352,7 @@ export default function MVPDevelopmentPage() {
               className="bg-muted/20 border border-border/50 rounded-2xl p-6 max-w-4xl mx-auto mb-8"
             >
               <p className="text-lg text-foreground font-medium mb-2">
-                Over 70% of app projects fail, but yours doesn't have to.
+                Over 70% of app projects fail, but yours doesn&apos;t have to.
               </p>
               <p className="text-muted-foreground">
                 Tap into our MVP development services to de-risk your project, test core assumptions, and establish a working definition of what product and market fit would look like.
@@ -416,7 +416,7 @@ export default function MVPDevelopmentPage() {
               Trusted by Innovative Startups
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We've helped these companies launch their MVPs and scale their businesses
+              We&apos;ve helped these companies launch their MVPs and scale their businesses
             </p>
           </motion.div>
 
@@ -778,7 +778,7 @@ export default function MVPDevelopmentPage() {
               What Our Clients Say
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what entrepreneurs and startups say about our MVP development.
+              Don&apos;t just take our word for it. Here&apos;s what entrepreneurs and startups say about our MVP development.
             </p>
           </motion.div>
 
@@ -803,7 +803,7 @@ export default function MVPDevelopmentPage() {
                     </div>
                     
                     <p className="text-muted-foreground mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     
                     <div className="flex items-center gap-3">
@@ -857,7 +857,7 @@ export default function MVPDevelopmentPage() {
               },
               {
                 question: "How long does it take to develop an MVP application?",
-                answer: "Timing can vary based on the product you're aiming to build. Our typical timeline ranges from 4-8 weeks for most MVPs. We perform comprehensive groundwork, including concept ideation, competitor analysis, and audience research, to build a high-quality version of your product that lays the ground for a successful full-fledged product."
+                answer: "Timing can vary based on the product you&apos;re aiming to build. Our typical timeline ranges from 4-8 weeks for most MVPs. We perform comprehensive groundwork, including concept ideation, competitor analysis, and audience research, to build a high-quality version of your product that lays the ground for a successful full-fledged product."
               },
               {
                 question: "When is it the right time to build an MVP?",
@@ -865,7 +865,7 @@ export default function MVPDevelopmentPage() {
               },
               {
                 question: "What makes Bansohi the best MVP development company?",
-                answer: "We are a reliable tech partner with firsthand experience in developing MVPs for various domains. Our experienced team has delivered 50+ successful projects with 99% client satisfaction. We adopt a product-focused approach to ensure your solution's market success, demonstrate flexibility to adjust to evolving business needs, and provide complete ownership of all deliverables."
+                answer: "We are a reliable tech partner with firsthand experience in developing MVPs for various domains. Our experienced team has delivered 50+ successful projects with 99% client satisfaction. We adopt a product-focused approach to ensure your solution&apos;s market success, demonstrate flexibility to adjust to evolving business needs, and provide complete ownership of all deliverables."
               }
             ].map((faq, index) => (
               <motion.div
@@ -908,7 +908,7 @@ export default function MVPDevelopmentPage() {
               Ready to Launch Your MVP?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a free consultation and detailed project estimate. Let's turn your idea into a market-ready MVP.
+              Get a free consultation and detailed project estimate. Let&apos;s turn your idea into a market-ready MVP.
             </p>
           </motion.div>
 
@@ -928,7 +928,7 @@ export default function MVPDevelopmentPage() {
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
                     <p className="text-muted-foreground">
-                      We've received your request and will contact you within 24 hours.
+                      We&apos;ve received your request and will contact you within 24 hours.
                     </p>
                   </div>
                 ) : (
