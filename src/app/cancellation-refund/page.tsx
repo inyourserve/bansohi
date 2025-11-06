@@ -261,7 +261,7 @@ export default function CancellationRefundPage() {
                     <div className="text-muted-foreground space-y-4">
                       <p>To request a refund, please follow these steps:</p>
                       <ol className="list-decimal list-inside ml-4 space-y-2">
-                        <li>Send an email to hello@bansohi.com with the subject "Refund Request"</li>
+                        <li>Send an email to hello@bansohi.com with the subject &quot;Refund Request&quot;</li>
                         <li>Include your project/service details, invoice number, and reason for refund</li>
                         <li>Provide your payment transaction details</li>
                         <li>Wait for our response (within 5-7 business days)</li>

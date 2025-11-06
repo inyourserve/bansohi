@@ -46,7 +46,7 @@ export default function PrivacyPage() {
                   className="mb-8"
                 >
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    At Bansohi Technology Private Limited ("we," "our," or "us"), we are committed to protecting your privacy. 
+                    At Bansohi Technology Private Limited (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), we are committed to protecting your privacy. 
                     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our 
                     website or use our services.
                   </p>
@@ -191,7 +191,7 @@ export default function PrivacyPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                   >
-                    <h2 className="text-2xl font-bold text-foreground mb-4">7. Children's Privacy</h2>
+                    <h2 className="text-2xl font-bold text-foreground mb-4">7. Children&apos;s Privacy</h2>
                     <div className="text-muted-foreground">
                       <p>
                         Our services are not intended for individuals under the age of 18. We do not knowingly collect personal 
@@ -210,7 +210,7 @@ export default function PrivacyPage() {
                     <div className="text-muted-foreground">
                       <p>
                         We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new 
-                        Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy 
+                        Privacy Policy on this page and updating the &quot;Last updated&quot; date. You are advised to review this Privacy 
                         Policy periodically for any changes.
                       </p>
                     </div>

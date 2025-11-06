@@ -46,8 +46,8 @@ export default function TermsPage() {
                   className="mb-8"
                 >
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    These Terms and Conditions ("Terms") govern your use of the services provided by Bansohi Technology Private Limited 
-                    ("we," "our," or "us"). By accessing or using our services, you agree to be bound by these Terms. If you do not 
+                    These Terms and Conditions (&quot;Terms&quot;) govern your use of the services provided by Bansohi Technology Private Limited
+                    (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By accessing or using our services, you agree to be bound by these Terms. If you do not
                     agree to these Terms, please do not use our services.
                   </p>
                 </motion.div>
@@ -202,7 +202,7 @@ export default function TermsPage() {
                       <ul className="list-disc list-inside ml-4 space-y-2">
                         <li>We do not guarantee specific business results or outcomes</li>
                         <li>We are not responsible for third-party services, APIs, or platforms</li>
-                        <li>Our services are provided "as is" without warranties of any kind, express or implied</li>
+                        <li>Our services are provided &quot;as is&quot; without warranties of any kind, express or implied</li>
                         <li>We are not liable for issues arising from client-provided content or requirements</li>
                       </ul>
                     </div>
@@ -282,7 +282,7 @@ export default function TermsPage() {
                     <div className="text-muted-foreground">
                       <p>
                         We reserve the right to modify these Terms at any time. We will notify you of any material changes by 
-                        posting the updated Terms on our website and updating the "Last updated" date. Your continued use of 
+                        posting the updated Terms on our website and updating the &quot;Last updated&quot; date. Your continued use of 
                         our services after such changes constitutes acceptance of the modified Terms.
                       </p>
                     </div>
