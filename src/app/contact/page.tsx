@@ -37,9 +37,9 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our development team",
-    contact: "+91-98765-43210",
+    contact: "+916204349329",
     action: "Call Now",
-    href: "tel:+919876543210"
+    href: "tel:+916204349329"
   },
   {
     icon: MessageSquare,

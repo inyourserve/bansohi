@@ -27,7 +27,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+91 1234567890</span>
+                <span>+916204349329</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
@@ -77,7 +77,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Terms of Service</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Legal</Link></li>
+              <li><Link href="/cancellation-refund" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Cancellation & Refund</Link></li>
+              <li><Link href="/shipping-delivery" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Shipping & Delivery</Link></li>
             </ul>
           </div>
         </div>

@@ -18,7 +18,7 @@ export const generateOrganizationSchema = () => {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-98765-43210",
+      "telephone": "+916204349329",
       "contactType": "customer service",
       "email": "hello@bansohi.com",
       "availableLanguage": ["English", "Hindi"]

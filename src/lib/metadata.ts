@@ -117,3 +117,75 @@ export const consultationMetadata: Metadata = {
     description: 'Get a free app development consultation and project quote. We provide detailed roadmap, timeline, and budget estimate.',
   },
 };
+
+// Privacy Policy page metadata
+export const privacyMetadata: Metadata = {
+  ...baseMetadata,
+  title: 'Privacy Policy | Bansohi Technology',
+  description: 'Read our privacy policy to understand how Bansohi Technology collects, uses, and protects your personal information when you use our services.',
+  keywords: 'privacy policy, data protection, personal information, Bansohi Technology privacy',
+  openGraph: {
+    title: 'Privacy Policy | Bansohi Technology',
+    description: 'Read our privacy policy to understand how Bansohi Technology collects, uses, and protects your personal information.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Bansohi Technology',
+    description: 'Read our privacy policy to understand how Bansohi Technology collects, uses, and protects your personal information.',
+  },
+};
+
+// Terms and Conditions page metadata
+export const termsMetadata: Metadata = {
+  ...baseMetadata,
+  title: 'Terms and Conditions | Bansohi Technology',
+  description: 'Read our terms and conditions to understand the legal agreement between you and Bansohi Technology when using our services.',
+  keywords: 'terms and conditions, terms of service, legal agreement, Bansohi Technology terms',
+  openGraph: {
+    title: 'Terms and Conditions | Bansohi Technology',
+    description: 'Read our terms and conditions to understand the legal agreement between you and Bansohi Technology.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms and Conditions | Bansohi Technology',
+    description: 'Read our terms and conditions to understand the legal agreement between you and Bansohi Technology.',
+  },
+};
+
+// Cancellation and Refund page metadata
+export const cancellationRefundMetadata: Metadata = {
+  ...baseMetadata,
+  title: 'Cancellation and Refund Policy | Bansohi Technology',
+  description: 'Learn about our cancellation and refund policy for app development services, MVP projects, and other services offered by Bansohi Technology.',
+  keywords: 'cancellation policy, refund policy, cancellation and refund, Bansohi Technology refund',
+  openGraph: {
+    title: 'Cancellation and Refund Policy | Bansohi Technology',
+    description: 'Learn about our cancellation and refund policy for app development services and projects.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cancellation and Refund Policy | Bansohi Technology',
+    description: 'Learn about our cancellation and refund policy for app development services and projects.',
+  },
+};
+
+// Shipping and Delivery page metadata
+export const shippingDeliveryMetadata: Metadata = {
+  ...baseMetadata,
+  title: 'Shipping and Delivery Policy | Bansohi Technology',
+  description: 'Understand our shipping and delivery policy for digital products, app deliverables, and project milestones from Bansohi Technology.',
+  keywords: 'shipping policy, delivery policy, shipping and delivery, Bansohi Technology delivery',
+  openGraph: {
+    title: 'Shipping and Delivery Policy | Bansohi Technology',
+    description: 'Understand our shipping and delivery policy for digital products and app deliverables.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shipping and Delivery Policy | Bansohi Technology',
+    description: 'Understand our shipping and delivery policy for digital products and app deliverables.',
+  },
+};
